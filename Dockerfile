@@ -22,9 +22,9 @@ WORKDIR /app
 COPY Gemfile* ./
 RUN gem install bundler
 
-ENV RAILS_VERSION 5.1.6
+ENV RAILS_VERSION 5.2.2
 
-RUN gem install rails --version "$RAILS_VERSION"
+RUN bundle install
 
 # Copy the main application.
 COPY . ./
