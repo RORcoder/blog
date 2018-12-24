@@ -22,8 +22,6 @@ WORKDIR /app
 COPY Gemfile* ./
 RUN gem install bundler
 
-ENV RAILS_VERSION 5.2.2
-
 RUN bundle install
 
 # Copy the main application.
